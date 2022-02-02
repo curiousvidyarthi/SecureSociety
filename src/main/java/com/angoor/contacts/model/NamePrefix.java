@@ -1,0 +1,38 @@
+/*
+ * Copyright (c) 2021 Angoor, Inc. and/or its affiliates. All rights reserved.
+ * Angoor Proprietary/Confidential. Use is subject to license terms.
+ */
+package com.angoor.contacts.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import com.angoor.common.model.EntityBase;
+
+import lombok.Getter;
+import lombok.Setter;
+
+/**
+ * @author Rakesh Kumar
+ * @since Version - 1.0
+ */
+@Entity
+@Table(name = "NAME_PREFIXES")
+public class NamePrefix extends EntityBase {
+	/**
+	 * Name prefix like Mr., Dr. etc.
+	 */
+	@Column(name = "NAME_PREFIX")
+	@Getter
+	@Setter
+	private String namePrefix;
+
+	/**
+	 * Description of this name prefix
+	 */
+	@Column(name = "DESCRIPTION")
+	@Getter
+	@Setter
+	private String description;
+}
